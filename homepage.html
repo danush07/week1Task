@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+  }
+  #products-container  {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+  }
+  .product-image {
+    max-width: 100%;
+    height: auto;
+  }
+  .card-footer {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-details {
+    margin-bottom: 10px;
+  }
+  button {
+    padding:   10px;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+  }
+  hr {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  #cart-features {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul li {
+    list-style: none;
+  }
+  #clear-cart {
+    margin-left: 10px;
+  }
+#cart {
+    
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.cart-product-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.cart-item span {
+  margin-top: 10px;
+}
+
+.cart-item button {
+  margin-top: 10px;
+  background-color: #ff5050;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+  h1{
+      display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+  .avg-price{
+    display: flex;
+    justify-content: space-between;
+  }
+  .total-price{
+     display: flex;
+    justify-content: space-between;
+  }
+  #sort-by{
+    padding: 10px;
+  }
+
+</style>
+</head>
+<body>
+  <h1>Our Products</h1>
+  <div id="products-container"></div>
+  <hr/>
+  <div id="cart-container">
+    <h1>Shopping Cart</h1>
+    <div id="cart-features">
+      <input placeholder="Enter the  price">
+    </input>
+      <div>
+        <select id="sort-by" onchange="sortCart()">
+          <option value="name">Sort by Name</option>
+          <option value="price">Sort by Price</option>
+        </select>
+        <button id="clear-cart" onclick="clearCart()">Clear Cart</button>
+      </div>
+    </div>
+    <div id="cart"></div>
+    <hr/>
+   <h1>
+        Cart Summary
+    </h1>
+    <div class="avg-price">
+
+        <p>Average Product Price:</p> <span id="average-price">0.00</span>
+    </div>
+    <hr/>
+    <div class="total-price">
+
+        <p>Total Price:</p> <span id="total-price">0.00</span>
+    </div>
+  </div>
+<script src="./script.js"></script>
+</body>
+</html>
