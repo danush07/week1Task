@@ -1,55 +1,55 @@
 const products = [
   {
-    id: 1,
+    id: 0,
     name: "Chair",
     image: "https://i.ibb.co/3yT2CNB/Image-2.png",
     price: 20.0,
     quantity: 0,
   },
   {
-    id: 2,
+    id: 1,
     name: "ChairTwo",
     image: "https://i.ibb.co/7KCZpkC/Image-1.png",
     price: 30.0,
     quantity: 0,
   },
   {
-    id: 3,
+    id: 2,
     name: "ChairFour",
     image: "https://i.ibb.co/QfVhPBq/Image.png",
     price: 25.0,
     quantity: 0,
   },
   {
-    id: 4,
+    id: 3,
     name: "Product4",
     image: "https://i.ibb.co/QfVhPBq/Image.png",
     price: 15.0,
     quantity: 0,
   },
   {
-    id: 5,
+    id: 4,
     name: "Product5",
     image: "https://i.ibb.co/3yT2CNB/Image-2.png",
     price: 22.0,
     quantity: 0,
   },
   {
-    id: 6,
+    id: 5,
     name: "Product6",
     image: "https://i.ibb.co/7KCZpkC/Image-1.png",
     price: 18.0,
     quantity: 0,
   },
   {
-    id: 7,
+    id: 6,
     name: "Product7",
     image: "https://i.ibb.co/QfVhPBq/Image.png",
     price: 35.0,
     quantity: 0,
   },
   {
-    id: 8,
+    id: 7,
     name: "Product8",
     image: "https://i.ibb.co/QfVhPBq/Image.png",
     price: 28.0,
@@ -78,7 +78,7 @@ products.forEach((product) => {
           </div>
           <div class="action">
             <button type="button" onclick="addToCart(products[${
-              product.id - 1
+              product.id
             }])">Add to cart</button>
           </div>
         </div>
